@@ -3,18 +3,17 @@ declare var $: any;
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
+  isSidebarOpen = false;
+
   ngOnInit(): void {
     this.addCaroussel();
   }
-  isSidebarOpen = false; // State for sidebar visibility
 
   toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;
-
-    // Add or remove no-hover class to the body for disabling hover
     if (this.isSidebarOpen) {
       document.body.classList.add('no-hover');
     } else {
