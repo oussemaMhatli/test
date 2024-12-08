@@ -1,0 +1,92 @@
+.offcanvas-header {
+  position: relative; /* Make the header position relative to position the button absolutely */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  padding: 0; /* Remove any default padding */
+  height: 100px; /* Optional: Set a height to ensure proper alignment */
+}
+
+.offcanvas-header .navbar-brand {
+  margin: 0; /* Remove margin around the logo */
+  padding: 0; /* Remove padding around the logo */
+}
+
+.offcanvas-header .logo-light {
+  max-width: 180px; /* Optionally limit the size of the logo */
+  width: 100%; /* Make the logo fill the container, but it won't exceed max-width */
+}
+
+.offcanvas-header .btn-close {
+  position: absolute;
+  top: 15px; /* Position the close button 10px from the top */
+  right: 15px; /* Position the close button 10px from the right */
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Base List Item Styles */
+.navbar-nav .nav-item {
+  margin: 0;
+  padding: 0; /* Remove padding for compactness */
+}
+
+.navbar-nav .nav-link {
+  display: block;
+  padding: 10px 15px; /* Standard padding */
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+/* Add hover effect to nav links */
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #444; /* Add background for dropdown */
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 8px 15px;
+  color: white;
+  background-color: transparent; /* Transparent background for items */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .offcanvas {
+    width: 35vw; /* Keep width as 35% of the screen for large screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .offcanvas {
+    width: 35vw; /* Keep width as 40% of the screen for medium screens */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 8px 15px; /* Reduce vertical spacing for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .offcanvas {
+    width: 50vw; /* Keep width as 50% of the screen for small screens */
+  }
+
+  .navbar-nav .nav-link {
+    padding: 5px 10px; /* Eliminate vertical spacing for small screens */
+  }
+}
